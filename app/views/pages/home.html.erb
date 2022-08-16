@@ -1,0 +1,14 @@
+<div class="container">
+<h1>Chat</h1>
+<% if current_user %>
+   <%= "Welcome back #{current_user.email}!" %>
+   <br>
+   <div class="btn-group">
+   <%= link_to "Go chat!", "m", class: "btn btn-outline-primary" %> &nbsp
+   <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-outline-danger" %>
+   </div>
+<% else %>
+   <%= link_to "Login", new_user_session_path, class: "btn btn-outline-success" %>   
+   <%= link_to "Register", new_user_registration_path, class: "btn btn-outline-info" %>
+<% end %>
+</div>
