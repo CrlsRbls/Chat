@@ -1,7 +1,11 @@
 <div class="container">
 <h1>Chat</h1>
 <% if current_user %>
-   <%= "Welcome back #{current_user.email}!" %>
+   <%= image_tag(current_user.avatar_thumbnail) %>
+   <br>
+   <br>
+   <%= "Welcome back #{current_user.email}!" %> 
+   <br>
    <br>
    <div class="btn-group">
    <%= link_to "Go chat!", rooms_path, class: "btn btn-outline-primary" %> &nbsp
