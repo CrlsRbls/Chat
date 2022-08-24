@@ -25,7 +25,7 @@ default: &default
 
 development:
   <<: *default
-  database: <%= Rails.application.credentials.DB_NAME.dev_db %>
+  database: turbo_dev
   username: <%= Rails.application.credentials.DB_USERNAME.dev_db %>
   password: <%= Rails.application.credentials.DB_PASSWORD.dev_db %>
 
